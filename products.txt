@@ -1,0 +1,10 @@
+{name: "Organic Tomatoes",
+category: "Fruits & Vegetables",
+Price: $2.99 per pound
+Description: Fresh, locally grown organic tomatoes. Packed with flavor and essential nutrients. Perfect for salads, sandwiches, or sauces.
+Weight: 1 lb
+Quantity: 10 lbs available
+Origin: Green Acres Farm
+Certification: USDA Organic
+Shipping: Ships within 2 business days
+SKU: TOM001}

@@ -1,0 +1,773 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+
+
+  
+		<!-- CSS here -->
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="/assets/css/flaticon.css">
+        <link rel="stylesheet" href="/assets/css/price_rangs.css">
+        <link rel="stylesheet" href="/assets/css/slicknav.css">
+        <link rel="stylesheet" href="/assets/css/animate.min.css">
+        <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="/assets/css/themify-icons.css">
+        <link rel="stylesheet" href="/assets/css/slick.css">
+        <link rel="stylesheet" href="/assets/css/nice-select.css">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+
+
+</head>
+
+<body>
+
+    <header style="background-color: white; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-bottom: 0.1px ">
+        <!-- Header Start -->
+       <div class="header-area header-transparrent">
+           <div class="headder-top header-sticky">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-2">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a href="/app/home"><img src="/assets/img/logo/Ekaw.png" alt=""></a>
+                            </div>  
+                        </div>
+                        <div class="col-lg-9 col-md-9">
+                            <div class="menu-wrapper">
+                                <!-- Main-menu -->
+                                <div class="main-menu">
+                                    <nav class="d-none d-lg-block">
+                                        <ul id="navigation">
+                                            <li><a href="/app/home">Home</a></li>
+                                            <li><a href="/app/talent">Shop</a></li>
+                                            <li><a href="/app/cart">Cart</a></li>
+                                            <li><a href="#">About Us</a>
+                                                
+                                            </li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>          
+                                <!-- Header-btn -->
+                                
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+       </div>
+        <!-- Header End -->
+    </header>
+
+
+
+
+
+
+    <div class=" container-fluid my-5 ">
+        <div class="row justify-content-center ">
+            <div class="col-xl-10">
+                <div class="card shadow-lg ">
+                    <div class="row p-2 mt-3 text-center mx-sm-2">
+                        <div class="col-12 mt-3">
+                            <img class="irc_mi img-fluid cursor-pointer mx-auto" src="/assets/img/logo/logo.jpg" width="150" height="150">
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="row  mx-auto justify-content-center text-center">
+                        <div class="col-12 mt-3 ">
+                            <nav aria-label="breadcrumb" class="second ">
+                                <ol class="breadcrumb indigo lighten-6 first  ">
+                                    <li class="breadcrumb-item font-weight-bold "><a class="black-text text-uppercase " href="#"><span class="mr-md-3 mr-1">BACK TO SHOP</span></a><i class="fa fa-angle-double-right " aria-hidden="true"></i></li>
+                                    <li class="breadcrumb-item font-weight-bold"><a class="black-text text-uppercase" href="#"><span class="mr-md-3 mr-1">SHOPPING BAG</span></a><i class="fa fa-angle-double-right text-uppercase " aria-hidden="true"></i></li>
+                                    <li class="breadcrumb-item font-weight-bold"><a class="black-text text-uppercase active-2" href="#"><span class="mr-md-3 mr-1">CHECKOUT</span></a></li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                
+                    <div class="row justify-content-around">
+                        
+                        <div class="col-md-6">
+                            <div class="card border-0 ">
+                                <div class="card-header card-2">
+                                    <p class="card-text text-muted mt-md-4  mb-2 space">YOUR ORDER <span class=" small text-muted ml-2 cursor-pointer">EDIT SHOPPING BAG</span> </p>
+                                    <hr class="my-2">
+                                </div>
+                                <div class="card-body pt-0">
+
+
+
+                                    <% for (let j=0;j<cproducts.length;j++) { %>
+                                        <div class="row productRow justify-content-between">
+                                          <div class="col-auto col-md-6" style="font-size: small;">
+                                            <div class="media flex-column flex-sm-row">
+                                              <img class="img-fluid" src="<%= cproducts[j].img %>" width="50" height="50">
+                                              <div class="media-body my-auto">
+                                                <div class="row">
+                                                  <div class="col-auto">
+                                                    <p class="mb-0"><b style="font-size: 12px;"><%= cproducts[j].name %></b></p>
+                                                    <small class="text-muted"><%= cproducts[j].origin %></small>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        <div class="pl-0 d-flex flex-sm-col col-auto my-auto align-items-center">
+                                            <!-- <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                                                                        
+                                                                                        <input  min="1"  name="quantity"  type="number" class="form-control form-control-sm" />
+                                                                                        
+                                                                                      </div> -->
+                                            <button class="btn btn-link" onclick="decrementQuantity(this)" style="width: 10px; height: 20px; padding-left: -5px; margin-right: 5px; font-size: 0.5rem;">
+                                                         <i class="fas fa-minus "  ></i>
+                                            </button>
+                                                                                    
+                                            <input id="quantity_<%= j %>" min="1" max="<%= cproducts[j].quantity%>" name="quantity" value="<%=cproducts[j].incart%>" type="number" class="form-control-sm boxed-1" style="width: 35px; height: 40px;"/>
+                                            
+                                            <button class="btn btn-link " id="inc_amount" onclick="incrementQuantity(this)" style="width: 15px; height: 20px; margin-left: 5px; font-size: 0.5rem;">
+                                                <i class="fas fa-plus mb-5"></i>
+                                            </button>
+                                        </div>
+                                          <div class="pl-0 flex-sm-col col-auto my-auto" id="priceElement">
+                                            <h6 class="mb-0" id="price_<%= j %>"><%= cproducts[j].price * cproducts[j].incart %></h6>
+                                          </div>
+                                          <div class="pl-0 flex-sm-col col-auto my-auto">
+                                            <!-- <a href="/app/cart/cancelProduct" class="text-muted"><i class="fas fa-times"></i></a> -->
+                                            <button class="cancel-product-btn" id="cancel" data-product-id="<%= cproducts[j].id %>"><i class="fa fa-times"></i></button>
+                                          </div>
+                                        </div>
+                                        <hr class="my-2">
+                                      <% } %>
+
+
+                                   
+                                    <div class="row ">
+                                        <div class="col">
+                                            
+                                            <div class="row justify-content-between">
+                                                <div class="col-4"><p ><b>Total</b></p></div>
+                                                <div class="flex-sm-col col-auto"><p  class="mb-1" id="totalPrice"><b>0.00</b></p> </div>
+                                            </div><hr class="my-0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-0">
+                                <div class="card-header pb-0">
+                                    <h2 class="card-title space ">Checkout</h2>
+                                    <p class="card-text text-muted mt-4  space">SHIPPING DETAILS</p>
+                                    <hr class="my-0">
+                                </div>
+                                <div class="card-body">
+                                    
+                                        <div class="form-group">
+                                            <label for="NAME" class="small text-muted mb-1">Phone Number</label>
+                                            <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" placeholder="+880">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="NAME" class="small text-muted mb-1">Address</label>
+                                            <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId">
+                                        </div>
+                                    
+                                    <div class="row mt-4">
+                                        <div class="col"><p class="text-muted mb-2">PAYMENT DETAILS</p><hr class="mt-0"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="NAME" class="small text-muted mb-1">NAME ON CARD</label>
+                                        <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="NAME" class="small text-muted mb-1">CARD NUMBER</label>
+                                        <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" >
+                                    </div>
+                                    <div class="row no-gutters">
+                                        <div class="col-sm-6 pr-sm-2">
+                                            <div class="form-group">
+                                                <label for="NAME" class="small text-muted mb-1">VALID THROUGH</label>
+                                                <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" >
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="NAME" class="small text-muted mb-1">CVC CODE</label>
+                                                <input type="text" class="form-control form-control-sm" name="NAME" id="NAME" aria-describedby="helpId" >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-md-5">
+                                        <!-- <div id="confirmation-card" class="confirmation-card">
+                                            <div class="confirmation-text">Order confirmed!</div>
+                                          </div> -->
+
+                                          <div id="myModal" class="modal fade">
+                                            <div class="modal-dialog modal-confirm">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <div class="icon-box">
+                                                            <i class="material-icons">&#xE876;</i>
+                                                        </div>
+                                                        <h4 class="modal-title text-center">Awesome!</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p class="text-center">Your order has been confirmed</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button class="btn btn-success btn-block" data-dismiss="modal" id="confirmButton">Explore Again!</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="col">
+                                            <button type="button" name="" id="confirmOrderButton" class="btn  btn-lg btn-block ">CONFIRM YOUR ORDER</button>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- JS here -->
+	
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="/assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="/assets/js/popper.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="/assets/js/jquery.slicknav.min.js"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="/assets/js/owl.carousel.min.js"></script>
+        <script src="/assets/js/slick.min.js"></script>
+        <script src="/assets/js/price_rangs.js"></script>
+        
+		<!-- One Page, Animated-HeadLin -->
+        <script src="/assets/js/wow.min.js"></script>
+		<script src="/assets/js/animated.headline.js"></script>
+        <script src="/assets/js/jquery.magnific-popup.js"></script>
+
+		<!-- Scrollup, nice-select, sticky -->
+        <script src="/assets/js/jquery.scrollUp.min.js"></script>
+        <script src="/assets/js/jquery.nice-select.min.js"></script>
+		<script src="/assets/js/jquery.sticky.js"></script>
+        
+        <!-- contact js -->
+        <script src="/assets/js/contact.js"></script>
+        <script src="/assets/js/jquery.form.js"></script>
+        <script src="/assets/js/jquery.validate.min.js"></script>
+        <script src="/assets/js/mail-script.js"></script>
+        <script src="/assets/js/jquery.ajaxchimp.min.js"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="/assets/js/plugins.js"></script>
+        <script src="/assets/js/main.js"></script>
+       
+
+
+
+
+
+        <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
+      ></script>
+      
+      
+   
+
+
+
+
+      <script>
+      
+
+
+
+
+
+      document.addEventListener("DOMContentLoaded", function () {
+  
+  const productArr = decodeHtml('<%= JSON.stringify(cproducts) %>');
+ 
+  // Initial calculation of the total price
+  updateTotalPrice();
+
+
+
+
+  
+ 
+    
+    const cancelButtons = document.querySelectorAll('.cancel-product-btn');
+  cancelButtons.forEach(function (cancelButton) {
+    cancelButton.addEventListener("click", async function () {
+
+      
+      const productId = cancelButton.getAttribute('data-product-id');
+      console.log(productId);
+
+
+      const dataToSend = {
+        productId: productId
+};
+      location.reload();
+      await fetch('/app/removeFromCart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dataToSend),
+    })
+    .then(response => {
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  return response.json();
+})
+.then(data => {
+  console.log(data); // Handle the response data if needed
+  return fetch('/app/cart', {
+    method: 'GET',
+  });
+})
+.catch(error => {
+  console.error('Error:', error);
+});
+
+    console.log("hocche ki kichu?")
+    
+
+
+
+    });
+  });
+
+});
+
+
+
+function decrementQuantity(button) {
+  const input = button.parentNode.querySelector('input[type=number]');
+  if (input.value > 0) {
+    input.stepDown();
+    updatePrice(input.id.split('_')[1]);
+  }
+}
+
+function incrementQuantity(button) {
+  const input = button.parentNode.querySelector('input[type=number]');
+  input.stepUp();
+  updatePrice(input.id.split('_')[1]);
+}
+function decodeHtml(html) {
+  var txt = document.createElement("textarea");
+  txt.innerHTML = html;
+  return JSON.parse(txt.value);
+}
+
+function updateTotalPrice() {
+    let totalPrice = 0;
+    const productArr = decodeHtml('<%= JSON.stringify(cproducts) %>');
+    productArr.forEach(function (product, index) {
+        // Get the quantity and price for the current product
+        const quantity = parseInt(document.getElementById(`quantity_${index}`).value);
+        const productPrice = parseFloat(product.price);
+
+        // Calculate and add the product's total price to the overall total
+        totalPrice += quantity * productPrice;
+    });
+
+    // Update the total price display
+    const totalPriceElement = document.querySelector("#totalPrice");
+    if (totalPriceElement) {
+      totalPriceElement.textContent = totalPrice
+    }
+  }
+
+
+function updatePrice(productId) {
+  console.log(productId);
+  const productArr = decodeHtml('<%= JSON.stringify(cproducts) %>');
+
+  console.log(productArr);
+  const quantityInput = document.getElementById(`quantity_${productId}`);
+  const priceElement = document.getElementById(`price_${productId}`);
+  const productPrice = parseFloat(productArr[productId].price);
+  console.log(productPrice);
+
+  const quantity = parseInt(quantityInput.value);
+  const totalPrice = productPrice * quantity;
+  priceElement.textContent = totalPrice
+
+  updateTotalPrice();
+
+  
+   // Display the updated price with two decimal places
+}
+
+
+
+
+
+
+
+
+const confirmOrderButton = document.getElementById("confirmOrderButton");
+const confirmButton = document.getElementById("confirmButton");
+
+$(document).ready(function () {
+    // Initially hide the modal
+    $('#myModal').modal('hide');
+});
+
+confirmOrderButton.addEventListener("click", function () {
+    // Show the confirmation card
+    $('#myModal').modal('show');
+});
+
+confirmButton.addEventListener("click", function () {
+    // Hide the confirmation card
+    $('#myModal').modal('hide');
+
+    // Redirect to /app/confirm
+    window.location.href = '/app/confirm';
+});
+
+
+
+
+
+
+
+
+      </script>
+      
+
+
+
+
+
+
+
+
+        
+        <style>
+
+
+	.modal-confirm {		
+		color: #636363;
+		width: 325px;
+		margin: 60px auto;
+	}
+	.modal-confirm .modal-content {
+        align-items: center;
+		padding: 20px;
+		border-radius: 5px;
+		border: none;
+	}
+	.modal-confirm .modal-header {
+        display: flex;
+        align-items: center;
+		border-bottom: none;  
+        position: relative;
+	}
+	.modal-confirm h4 {
+        
+        margin-top: 30px;
+		text-align: center;
+		font-size: 26px;
+		
+	}
+
+    .modal-title{
+        text-align: center;
+    }
+	.modal-confirm .form-control, .modal-confirm .btn {
+		min-height: 40px;
+		border-radius: 3px; 
+	}
+	.modal-confirm .close {
+        position: absolute;
+		top: -5px;
+		right: -5px;
+	}	
+	.modal-confirm .modal-footer {
+		border: none;
+		text-align: center;
+		border-radius: 5px;
+		font-size: 13px;
+	}	
+	.modal-confirm .icon-box {
+		color: #fff;		
+		position: absolute;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		top: -70px;
+		width: 95px;
+		height: 95px;
+		border-radius: 50%;
+		z-index: 9;
+		background: #82ce34;
+		padding: 15px;
+		text-align: center;
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+	}
+	.modal-confirm .icon-box i {
+		font-size: 58px;
+		position: relative;
+		top: 3px;
+	}
+	.modal-confirm.modal-dialog {
+		margin-top: 250px;
+	}
+    .modal-confirm .btn {
+        color: #fff;
+        border-radius: 4px;
+		background: #82ce34;
+		text-decoration: none;
+		transition: all 0.4s;
+        line-height: normal;
+        border: none;
+    }
+	.modal-confirm .btn:hover, .modal-confirm .btn:focus {
+		background: #6fb32b;
+		outline: none;
+	}
+	.trigger-btn {
+		display: inline-block;
+		margin: 100px auto;
+	}
+
+
+  /* Hide the spinner arrows for number inputs */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+  -moz-appearance:textfield;
+}
+
+
+body{
+    background: linear-gradient(110deg, #BBDEFB 60%,#42A5F5  60%);                        
+}
+        
+.shop{
+    font-size: 10px;
+}
+
+.space{
+    letter-spacing: 0.8px !important;
+}
+
+.second a:hover {
+    color: rgb(92, 92, 92) ;
+}
+
+.active-2 {
+    color: rgb(92, 92, 92) 
+}
+
+
+.breadcrumb>li+li:before {
+    content: "" !important
+}
+
+.breadcrumb {
+    padding: 0px;
+    font-size: 10px;
+    color: #aaa !important;
+}
+
+.first {
+    background-color: white ;
+}
+
+a {
+    text-decoration: none !important;
+    color: #aaa ;
+}
+
+.btn-lg,.form-control-sm:focus,
+.form-control-sm:active,
+a:focus,a:active {
+    outline: none !important;
+    box-shadow: none !important
+}
+
+.form-control-sm:focus{
+    border:1.5px solid #4bb8a9 ; 
+}
+
+.btn-group-lg>.btn, .btn-lg {
+    
+    font-size: 1rem;
+    border-radius: 0;
+    color: white !important;
+    background-color: #4bb8a9;
+    height: 2.8rem !important;
+    border-radius: 0.2rem !important;
+}
+
+.btn-group-lg>.btn:hover, .btn-lg:hover {
+    background-color: #26A69A;
+}
+
+.btn-outline-primary{
+    background-color: #fff !important;
+    color:#4bb8a9 !important;
+    border-radius: 0.2rem !important;   
+    border:1px solid #4bb8a9;
+}
+
+.btn-outline-primary:hover{
+    background-color:#4bb8a9  !important;
+    color:#fff !important;
+    border:1px solid #4bb8a9;
+}
+
+.card-2{
+    margin-top: 40px !important;
+}
+
+.card-header{
+    background-color: #fff;
+    border-bottom:0px solid #aaaa !important;
+}
+
+p{
+    font-size: 13px ;
+}
+        
+.small{
+    font-size: 9px !important;
+}
+
+.form-control-sm {
+    height: calc(2.2em + .5rem + 2px);
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: 0;   
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.boxed {
+    padding: 0px 8px 0 8px ;
+    background-color: #4bb8a9;
+    color: white;
+}
+
+.boxed-1{
+    padding: 0px 8px 0 8px ;
+    color: black !important;
+    border: 1px solid #aaaa;
+}
+
+.confirmation-card {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  animation: fadeInOut 3s forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+/* Button Style */
+.cancel-product-btn {
+  background-color: #dc3545; /* Red background color (you can change it) */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+/* Spacing between icon and text */
+
+/* Change background color on hover (optional) */
+.cancel-product-btn:hover {
+  background-color: #a31c29; /* Darker red on hover (you can change it) */
+}
+
+
+@media (max-width: 767px) {
+    .breadcrumb-item+.breadcrumb-item {
+        padding-left: 0
+    }
+}
+        </style>
+</body>
+
+</html>

@@ -1,0 +1,555 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+
+
+
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+            <link rel="stylesheet" href="/assets/css/flaticon.css">
+            <link rel="stylesheet" href="/assets/css/price_rangs.css">
+            <link rel="stylesheet" href="/assets/css/slicknav.css">
+            <link rel="stylesheet" href="/assets/css/animate.min.css">
+            <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+            <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+            <link rel="stylesheet" href="/assets/css/themify-icons.css">
+            <link rel="stylesheet" href="/assets/css/slick.css">
+            <link rel="stylesheet" href="/assets/css/nice-select.css">
+            <link rel="stylesheet" href="/assets/css/style.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+            <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
+
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <header style="background-color: white; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-bottom: 0.1px ; height: 130px; ">
+        <!-- Header Start -->
+       <div class="header-area header-transparrent">
+           <div class="headder-top header-sticky">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-2">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a href="/app/home"><img src="/assets/img/logo/Ekaw.png" alt=""></a>
+                            </div>  
+                        </div>
+                        <div class="col-lg-9 col-md-9">
+                            <div class="menu-wrapper">
+                                <!-- Main-menu -->
+                                <div class="main-menu">
+                                    <nav class="d-none d-lg-block">
+                                        <ul id="navigation">
+                                            <li><a href="/app/home">Home</a></li>
+                                            <li><a href="/app/talent">Shop </a></li>
+                                            <li><a href="/app/cart">Cart</a></li>
+                                            <li><a href="#">About Us</a>
+                                                
+                                            </li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>          
+                                <!-- Header-btn -->
+                                
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+       </div>
+        <!-- Header End -->
+    </header>
+    <!-- For demo purpose -->
+
+
+
+
+
+
+
+
+
+    <div class=" container-fluid " style="background-color: #27963C; ">
+        <div class="row mainRow-1  " >
+            <div class="col-xl-10">
+                
+                    <div class="row p-2 mt-3 text-center mx-sm-2">
+                        
+                    </div>
+                    
+                    
+                   
+                    <div class="row mainRow-2">
+                        
+                        <div class="col-md-6 photoPart">
+                            
+                            <img src=<%= product.img %> alt="green apple slice" class="full-width-height">
+                        </div>
+
+
+                            
+                        
+                        <div class="col-md-4 infoPart " >
+                            <div class="card border-0 mt-3">
+                                
+
+
+                                <div class="title">
+                                    <h1><%=product.name%></h1>
+                                    <span><%=product.origin%></span>
+                                </div>
+                                <div class="price">
+                                    Rs <span><%=product.price%></span> TK
+                                </div>
+                                <!-- <div class="variant">
+                                    <h3>SELECT A COLOR</h3>
+                                    <ul>
+                                        <li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537302064/codepen/delicious-apples/green-apple2.png" alt="green apple"></li>
+                                        <li><img src="https://res.cloudinary.com/john-mantas/image/upload/v1537302752/codepen/delicious-apples/yellow-apple.png" alt="yellow apple"></li>
+                                       
+                                </div> -->
+                                <div class="description">
+                                    <h3>BENEFITS</h3>
+                                    <ul>
+                                        <p><%=product.description%></p>
+                                        
+                                        
+                                        
+                    
+                                        <div>
+                                            &nbsp;
+                                          </div>
+                                        <div class = "purchase-info">
+                                            <input type = "number" min = "1" value = "1" max="<%= product.quantity%>">
+                                            
+                                          <% if (product.quantity == 0) { %>
+                                            <p style="color: red;">Product out of stock</p>
+                                            <% } %>
+                                          </div>   
+                                    </ul>
+                                </div>
+                                <button class="buy--btn"  id="addToCartBtn" style="background-color: #27963C;"  <% if (product.quantity ==0) { %>disabled<% } %>><%=btnText%></button>
+
+
+
+
+
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- JS here -->
+	
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="/assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="/assets/js/popper.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="/assets/js/jquery.slicknav.min.js"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="/assets/js/owl.carousel.min.js"></script>
+        <script src="/assets/js/slick.min.js"></script>
+        <script src="/assets/js/price_rangs.js"></script>
+        
+		<!-- One Page, Animated-HeadLin -->
+        <script src="/assets/js/wow.min.js"></script>
+		<script src="/assets/js/animated.headline.js"></script>
+        <script src="/assets/js/jquery.magnific-popup.js"></script>
+
+		<!-- Scrollup, nice-select, sticky -->
+        
+        <script src="/assets/js/jquery.nice-select.min.js"></script>
+		<script src="/assets/js/jquery.sticky.js"></script>
+        
+        <!-- contact js -->
+        <script src="/assets/js/contact.js"></script>
+        <script src="/assets/js/jquery.form.js"></script>
+        <script src="/assets/js/jquery.validate.min.js"></script>
+        <script src="/assets/js/mail-script.js"></script>
+        <script src="/assets/js/jquery.ajaxchimp.min.js"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="/assets/js/plugins.js"></script>
+        <script src="/assets/js/main.js"></script>
+        <script>
+            function redirectToDetails() {
+                window.location.href = "/app/profile"; // Redirect to the talent page
+            }
+           
+        </script>
+        
+
+        <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
+      ></script>
+<script>
+  
+  document.getElementById('addToCartBtn').addEventListener('click', async () => {
+   const text = document.getElementById('addToCartBtn').textContent;
+   
+      var productId = '<%= product.id %>'; // Replace with the actual ID variable
+      var quantityInput = document.querySelector('input[type="number"]');
+      var quantity = parseInt(quantityInput.value);
+
+      var status = 'check';
+
+      
+    if(text==='REMOVE FROM CART' || '<%=btnText%>'==='REMOVE FROM CART')
+    {
+      const response = await fetch('/app/removeFromCart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ productId}),
+    });
+
+    if (response.ok) {
+      // Successfully added to the cart, update the button state
+      document.getElementById('addToCartBtn').textContent = 'ADD TO CART';
+      
+    } else {
+      console.error('Error adding product to cart:', response.statusText);
+    }
+
+
+    }
+
+    else{
+    const response = await fetch('/app/addToCart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ productId, quantity}),
+    });
+
+    if (response.ok) {
+      // Successfully added to the cart, update the button state
+      document.getElementById('addToCartBtn').textContent = 'REMOVE FROM CART';
+      
+    } else {
+      console.error('Error adding product to cart:', response.statusText);
+    }
+  }
+  });
+
+
+
+
+
+</script>
+
+<style>
+
+
+    /*
+*
+* ==========================================
+* FOR DEMO PURPOSE
+* ==========================================
+*
+*/
+
+* {
+	box-sizing: border-box;
+}
+body {
+	height: 100%;
+}
+
+body {
+	display: grid;
+	
+	font-family: "Raleway", sans-serif;
+	background-color: white;
+}
+
+.full-width-height {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+h3 {
+	font-size: 0.7em;
+	letter-spacing: 1.2px;
+	color: grey;
+}
+
+img {
+			max-width: 100%;
+			
+		}
+
+/* ----- Product Section ----- */
+.photoPart{
+    margin: 0;
+    padding: 0%;
+}
+
+.infoPart{
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+
+.mainRow-1{
+
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 15px;
+    margin-left: 15px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.mainRow-2{
+    background-color: white;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.product {
+	display: grid;
+	grid-template-columns: 0.9fr 1fr;
+	margin: auto;
+	padding: 2.5em 0;
+	min-width: 800px;
+	background-color: white;
+	border-radius: 5px;
+}
+
+/* ----- Photo Section ----- */
+.product__photo {
+	position: relative;
+}
+
+.photo-container {
+	position: absolute;
+	left: -2.5em;
+	display: grid;
+	grid-template-rows: 1fr;
+	width: 100%;
+	height: 100%;
+	border-radius: 6px;
+	box-shadow: 4px 4px 25px -2px rgba(0, 0, 0, 0.3);
+}
+
+.photo-main {
+	border-radius: 6px 6px 0 0;
+	background-color: #9be010;
+	background: radial-gradient(#e5f89e, #96e001);
+
+	.controls {
+		display: flex;
+		justify-content: space-between;
+		padding: 0.8em;
+		color: #fff;
+
+		i {
+			cursor: pointer;
+		}
+	}
+
+	img {
+		position: absolute;
+		left: -3.5em;
+		top: 2em;
+		max-width: 110%;
+		filter: saturate(150%) contrast(120%) hue-rotate(10deg)
+			drop-shadow(1px 20px 10px rgba(0, 0, 0, 0.3));
+	}
+}
+
+.photo-album {
+	padding: 0.7em 1em;
+	border-radius: 0 0 6px 6px;
+	background-color: #fff;
+
+	ul {
+		display: flex;
+  justify-content: space-around;
+  list-style: none; /* Remove the default list styles */
+  padding: 0;
+  margin: 0; /* Remove default margin */
+  width: 100%; /* Ensure the ul takes up the full width */
+	}
+
+	li {
+		display: inline-block; /* Display li elements inline */
+  width: 55px;
+  height: 55px;
+  padding: 7px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  margin: 0 5px; /* Add margin for spacing between li elements */
+	}
+}
+
+/* ----- Informations Section ----- */
+.product__info {
+	padding: 0.8em 0;
+}
+
+.title {
+	h1 {
+		margin-bottom: 0.1em;
+		color: black;
+		font-size: 1.5em;
+		font-weight: 900;
+	}
+
+	span {
+		font-size: 0.7em;
+		color: grey;
+	}
+}
+
+.price {
+	margin: 1.5em 0;
+	color: red;
+	font-size: 1.2em;
+
+	span {
+		padding-left: 0.15em;
+		font-size: 2.9em;
+	}
+}
+
+.variant {
+	overflow: auto;
+
+	h3 {
+		margin-bottom: 1.1em;
+	}
+
+	li {
+		float: left;
+		width: 35px;
+		height: 35px;
+		padding: 3px;
+		border: 1px solid transparent;
+		border-radius: 3px;
+		cursor: pointer;
+
+		&:first-child,
+		&:hover {
+			border: 1px solid grey;
+		}
+	}
+
+	li:not(:first-child) {
+		margin-left: 0.1em;
+	}
+}
+
+.description {
+	clear: left;
+	margin: 2em 0;
+
+	h3 {
+		margin-bottom: 1em;
+	}
+
+	ul {
+		font-size: 0.8em;
+		list-style: disc;
+		margin-left: 1em;
+	}
+
+	li {
+		text-indent: -0.6em;
+		margin-bottom: 0.5em;
+	}
+}
+
+.buy--btn {
+	padding: 1.5em 3.1em;
+	border: none;
+	border-radius: 7px;
+	font-size: 0.8em;
+	font-weight: 700;
+	letter-spacing: 1.3px;
+	color: #fff;
+	background-color: red;
+	box-shadow: 2px 2px 25px -7px black;
+	cursor: pointer;
+
+	&:active {
+		transform: scale(0.97);
+	}
+}
+
+@media (max-width: 767px) {
+    .product__photo {
+        width: 100%;
+    }
+}
+
+
+</style>
+
+</body>
+</html>
